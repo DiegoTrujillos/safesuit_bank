@@ -88,10 +88,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child:Container(
-          padding: EdgeInsets.all(11.0),
+          padding: const EdgeInsets.all(11.0),
           width: 300,
           height: 180,
-          decoration: BoxDecoration(color:Color.fromRGBO(67, 3, 123, 1),
+          decoration: BoxDecoration(color:const Color.fromRGBO(67, 3, 123, 1),
           borderRadius: BorderRadius.circular(15)),
           child: Column(
             children: [
@@ -100,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   //Nombre o logo
-                  Text("Spin",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25)),
+                  const Text("Spin",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -108,16 +108,16 @@ class _MyHomePageState extends State<MyHomePage> {
                         "assets/images/6404100.png",
                         height: 35.0,
                       ),
-                      SizedBox(width: 90.0,),
-                      Icon(Icons.add_business_sharp,color: Colors.white,),
+                      const SizedBox(width: 90.0,),
+                      const Icon(Icons.add_business_sharp,color: Colors.white,),
                     ],
                   ),
                 ],
               ),
               //numero de la tarjeta
-              Text("0000 0000 0000 0000",style: TextStyle(color: const Color.fromARGB(255, 255, 255, 255),fontSize: 15,fontFamily: 'card'),),
+              const Text("0000 0000 0000 0000",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 15,fontFamily: 'card'),),
               //fecha
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Valido hasta:",style: TextStyle(color: Colors.white70,fontSize: 5),),
@@ -125,7 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ]
               ),
               //Bancaria
-              Padding(padding: EdgeInsets.all(12), child:  Row(
+              const Padding(padding: EdgeInsets.all(12), child:  Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Text("VISA",style: TextStyle(color: Colors.white,fontSize:17,fontWeight: FontWeight.bold),),
