@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:safesuit_bank/core/presentation/widgets/card_widget.dart';
+import 'package:safesuit_bank/core/presentation/widgets/titulo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -89,8 +91,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child:Container(
           padding: const EdgeInsets.all(11.0),
-          width: 300,
-          height: 180,
+          width: 320,
+          height: 200,
           decoration: BoxDecoration(color:const Color.fromRGBO(67, 3, 123, 1),
           borderRadius: BorderRadius.circular(15)),
           child: Column(
@@ -100,7 +102,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   //Nombre o logo
-                  const Text("Spin",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25)),
+                  // const Text("Spin",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25)),
+                  TituloWidget(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -110,6 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       const SizedBox(width: 90.0,),
                       const Icon(Icons.add_business_sharp,color: Colors.white,),
+                      // CardWidget(),
                     ],
                   ),
                 ],

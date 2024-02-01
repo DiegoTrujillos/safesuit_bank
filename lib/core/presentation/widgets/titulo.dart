@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-class CardWidget extends StatelessWidget{
+class TituloWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200.0,
+      height: 50.0,
       width: 100.0,
       padding: const EdgeInsets.all(10.0),
-      child: const Text("hola Mundo"),);
+      child: const Text("Spin",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25)),
+      );  
   }
 
 }
