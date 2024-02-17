@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:safesuit_bank/core/presentation/widgets/card_widget.dart';
+import 'package:safesuit_bank/core/data/models/cardModel.dart';
+import 'package:safesuit_bank/core/data/models/userModel.dart';
+import 'package:safesuit_bank/core/domain/entities/card.dart';
+import 'package:safesuit_bank/core/domain/entities/user.dart';
 import 'package:safesuit_bank/core/presentation/widgets/imagenes.dart';
 import 'package:safesuit_bank/core/presentation/widgets/titulo.dart';
 import 'package:safesuit_bank/core/presentation/widgets/valido.dart';
@@ -74,6 +77,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final User user = User(name: "Angel", lastName: "Zea", telefono: "1232123", email: "algo.@gmail.com", password: "1234");
+    final CardEntity card = CardEntity(number: "123456789", ccv: 123, expireDate: "01/26", owner: "Zea", bankName: "Visa");
+    final UserModel userModel = UserModel.fromEntity(user);
+    final CardModel cardModel = CardModel.fromEntity(card);
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -93,8 +100,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
           child: Container(
               padding: const EdgeInsets.all(11.0),
-              width: 320,
-              height: 200,
+              width: 420,
+              height: 300,
               decoration: BoxDecoration(
                   color: const Color.fromRGBO(67, 3, 123, 1),
                   borderRadius: BorderRadius.circular(15)),
@@ -107,6 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       //Nombre o logo
                       // const Text("Spin",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25)),
                       TituloWidget(),
+                      ElevatedButton(onPressed: () => {}, child: Text('Press')),
                       // Row(
                       //   mainAxisAlignment: MainAxisAlignment.start,
                       //   children: [
@@ -123,6 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                   //numero de la tarjeta
+                  
                   const Text(
                     "0000 0000 0000 0000",
                     style: TextStyle(
@@ -139,6 +148,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   //   ]
                   // )
                   ValidoWidget(),
+                  Text(userModel.name, style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),
+                  Text(cardModel.bankName, style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),
                   //Bancaria
                   const Padding(
                     padding: EdgeInsets.all(12),
