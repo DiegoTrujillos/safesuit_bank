@@ -3,6 +3,7 @@ import 'package:safesuit_bank/core/data/models/cardModel.dart';
 import 'package:safesuit_bank/core/data/models/userModel.dart';
 import 'package:safesuit_bank/core/domain/entities/card.dart';
 import 'package:safesuit_bank/core/domain/entities/user.dart';
+import 'package:safesuit_bank/core/presentation/widgets/calse.dart';
 import 'package:safesuit_bank/core/presentation/widgets/imagenes.dart';
 import 'package:safesuit_bank/core/presentation/widgets/titulo.dart';
 import 'package:safesuit_bank/core/presentation/widgets/valido.dart';
@@ -149,6 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   // )
                   ValidoWidget(),
                   Text(userModel.name, style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),
+                  demo1(user: user),
                   Text(cardModel.bankName, style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),
                   //Bancaria
                   const Padding(
