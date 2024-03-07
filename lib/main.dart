@@ -5,6 +5,7 @@ import 'package:safesuit_bank/core/domain/entities/card.dart';
 import 'package:safesuit_bank/core/domain/entities/user.dart';
 import 'package:safesuit_bank/core/presentation/widgets/calse.dart';
 import 'package:safesuit_bank/core/presentation/widgets/imagenes.dart';
+import 'package:safesuit_bank/core/presentation/widgets/loginPage.dart';
 import 'package:safesuit_bank/core/presentation/widgets/titulo.dart';
 import 'package:safesuit_bank/core/presentation/widgets/valido.dart';
 
@@ -78,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final User user = User(name: "Angel", lastName: "Zea", telefono: "1232123", email: "algo.@gmail.com", password: "1234");
+    final User user = User(name: "Brandon", lastName: "Lopez", telefono: "1232123", email: "Lopez.Diaz@gmail.com", password: "1234");
     final CardEntity card = CardEntity(number: "123456789", ccv: 123, expireDate: "01/26", owner: "Zea", bankName: "Visa");
     final UserModel userModel = UserModel.fromEntity(user);
     final CardModel cardModel = CardModel.fromEntity(card);
@@ -102,72 +103,74 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Container(
               padding: const EdgeInsets.all(11.0),
               width: 420,
-              height: 300,
+              height: 500,
               decoration: BoxDecoration(
                   color: const Color.fromRGBO(67, 3, 123, 1),
                   borderRadius: BorderRadius.circular(15)),
               child: Column(
                 children: [
-                  //tipo (img)
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      //Nombre o logo
-                      // const Text("Spin",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25)),
-                      TituloWidget(),
-                      ElevatedButton(onPressed: () => {}, child: Text('Press')),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.start,
-                      //   children: [
-                      //     Image.asset(
-                      //       "assets/images/6404100.png",
-                      //       height: 35.0,
-                      //     ),
-                      //     const SizedBox(width: 90.0,),
-                      //     const Icon(Icons.add_business_sharp,color: Colors.white,),
-                      //     // CardWidget(),
-                      //   ],
-                      // ),
-                      ImagenesWidget(),
-                    ],
-                  ),
-                  //numero de la tarjeta
+                LoginPage(),
+
+                //   //tipo (img)
+                //   Column(
+                //     mainAxisAlignment: MainAxisAlignment.center,
+                //     children: [
+                //       //Nombre o logo
+                //       // const Text("Spin",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25)),
+                //       TituloWidget(),
+                //       ElevatedButton(onPressed: () => {}, child: Text('Press')),
+                //       // Row(
+                //       //   mainAxisAlignment: MainAxisAlignment.start,
+                //       //   children: [
+                //       //     Image.asset(
+                //       //       "assets/images/6404100.png",
+                //       //       height: 35.0,
+                //       //     ),
+                //       //     const SizedBox(width: 90.0,),
+                //       //     const Icon(Icons.add_business_sharp,color: Colors.white,),
+                //       //     // CardWidget(),
+                //       //   ],
+                //       // ),
+                //       ImagenesWidget(),
+                //     ],
+                //   ),
+                //   //numero de la tarjeta
                   
-                  const Text(
-                    "0000 0000 0000 0000",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontSize: 15,
-                        fontFamily: 'card'),
-                  ),
-                  //fecha
-                  // const Row(
-                  //   mainAxisAlignment: MainAxisAlignment.center,
-                  //   children: [
-                  //     Text("Valido hasta:",style: TextStyle(color: Colors.white70,fontSize: 5),),
-                  //     Text("01/26",style: TextStyle(color: Colors.white70,fontSize: 12),),
-                  //   ]
-                  // )
-                  ValidoWidget(),
-                  Text(userModel.name, style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),
-                  demo1(user: user),
-                  Text(cardModel.bankName, style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),
-                  //Bancaria
-                  const Padding(
-                    padding: EdgeInsets.all(12),
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            "VISA",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ]),
-                  )
-                ],
+                //   const Text(
+                //     "0000 0000 0000 0000",
+                //     style: TextStyle(
+                //         color: Color.fromARGB(255, 255, 255, 255),
+                //         fontSize: 15,
+                //         fontFamily: 'card'),
+                //   ),
+                //   //fecha
+                //   // const Row(
+                //   //   mainAxisAlignment: MainAxisAlignment.center,
+                //   //   children: [
+                //   //     Text("Valido hasta:",style: TextStyle(color: Colors.white70,fontSize: 5),),
+                //   //     Text("01/26",style: TextStyle(color: Colors.white70,fontSize: 12),),
+                //   //   ]
+                //   // )
+                //   ValidoWidget(),
+                //   Text(userModel.name, style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),
+                //   demo1(user: user),
+                //   Text(cardModel.bankName, style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),
+                //   //Bancaria
+                //   const Padding(
+                //     padding: EdgeInsets.all(12),
+                //     child: Row(
+                //         mainAxisAlignment: MainAxisAlignment.end,
+                //         children: [
+                //           Text(
+                //             "VISA",
+                //             style: TextStyle(
+                //                 color: Colors.white,
+                //                 fontSize: 17,
+                //                 fontWeight: FontWeight.bold),
+                //           ),
+                //         ]),
+                //   )
+                 ],
               ))),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
