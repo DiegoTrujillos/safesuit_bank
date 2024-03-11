@@ -5,6 +5,7 @@ import 'package:safesuit_bank/core/domain/entities/card.dart';
 import 'package:safesuit_bank/core/domain/entities/user.dart';
 import 'package:safesuit_bank/core/presentation/widgets/calse.dart';
 import 'package:safesuit_bank/core/presentation/widgets/imagenes.dart';
+import 'package:safesuit_bank/core/presentation/widgets/login.dart';
 import 'package:safesuit_bank/core/presentation/widgets/titulo.dart';
 import 'package:safesuit_bank/core/presentation/widgets/valido.dart';
 
@@ -115,6 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       //Nombre o logo
                       // const Text("Spin",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25)),
                       TituloWidget(),
+                      Login(),
                       ElevatedButton(onPressed: () => {}, child: Text('Press')),
                       // Row(
                       //   mainAxisAlignment: MainAxisAlignment.start,
